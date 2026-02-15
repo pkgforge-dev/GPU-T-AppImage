@@ -19,7 +19,7 @@ echo '#!/bin/sh
 exec dotnet "$APPDIR"/lib/GPU-T/GPU-T.dll' > ./AppDir/bin/gpu-t
 chmod +x ./AppDir/bin/gpu-t
 
-quick-sharun /usr/lib/GPU-T /usr/bin/vulkan-info
+quick-sharun /usr/lib/GPU-T /usr/bin/vulkaninfo
 
 # Additional changes can be done in between here
 
