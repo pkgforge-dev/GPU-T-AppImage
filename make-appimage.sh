@@ -11,7 +11,7 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=/usr/share/icons/hicolor/512x512/apps/gpu-t.png
 export DESKTOP=/usr/share/applications/gpu-t.desktop
 export DEPLOY_DOTNET=1
-export DEPLOY_VULKAN=1
+export DEPLOY_VULKAN=0
 
 # Deploy dependencies
 mkdir -p ./AppDir/bin
@@ -19,7 +19,7 @@ echo '#!/bin/sh
 exec dotnet "$APPDIR"/lib/GPU-T/GPU-T.dll' > ./AppDir/bin/gpu-t
 chmod +x ./AppDir/bin/gpu-t
 
-quick-sharun /usr/lib/GPU-T /usr/bin/vulkaninfo
+quick-sharun /usr/lib/GPU-T
 
 # Additional changes can be done in between here
 
