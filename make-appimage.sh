@@ -20,7 +20,10 @@ echo '#!/bin/sh
 exec dotnet "$APPDIR"/lib/GPU-T/GPU-T.dll' > ./AppDir/bin/gpu-t
 chmod +x ./AppDir/bin/gpu-t
 
-quick-sharun /usr/lib/GPU-T
+quick-sharun \
+	/usr/lib/GPU-T     \
+	/usr/lib/libSM.so* \
+	/usr/lib/libICE.so*
 
 # Additional changes can be done in between here
 
