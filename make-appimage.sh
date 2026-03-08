@@ -17,7 +17,7 @@ export STRACE_MODE=0
 # Deploy dependencies
 mkdir -p ./AppDir/bin
 cp -r /usr/lib/GPU-T/* ./AppDir/bin
-cp -r /usr/bin/gpu-t   ./AppDir/bin
+cp /usr/bin/gpu-t      ./AppDir/bin
 quick-sharun \
 	./AppDir/bin/*     \
 	/usr/lib/libSM.so* \
