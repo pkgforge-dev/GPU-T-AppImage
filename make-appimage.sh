@@ -16,14 +16,13 @@ export STRACE_MODE=0
 
 # Deploy dependencies
 mkdir -p ./AppDir/bin
-echo '#!/bin/sh
-exec dotnet "$APPDIR"/lib/GPU-T/GPU-T.dll' > ./AppDir/bin/gpu-t
-chmod +x ./AppDir/bin/gpu-t
-
+cp -r /usr/lib/GPU-T/* ./AppDir/bin
+cp -r /usr/bin/gpu-t   ./AppDir/bin
 quick-sharun \
-	/usr/lib/GPU-T     \
+	./AppDir/bin/*     \
 	/usr/lib/libSM.so* \
 	/usr/lib/libICE.so*
+echo 'DOTNET_ROOT=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 
