@@ -11,7 +11,7 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=/usr/share/icons/hicolor/512x512/apps/gpu-t.png
 export DESKTOP=/usr/share/applications/gpu-t.desktop
 export DEPLOY_DOTNET=1
-export DEPLOY_VULKAN=0
+export ALWAYS_SOFTWARE=1
 export STRACE_MODE=0
 
 # Deploy dependencies
